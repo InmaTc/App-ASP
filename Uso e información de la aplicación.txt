@@ -1,0 +1,29 @@
+﻿
+
+Funcionamiento de la aplicación:
+
+- Accedes mediante la página PáginaPrincipal.
+- Como no estas logeado, te lleva a la página de iniciar sesión.
+- También puedes seleccionar la opción de Registrarte como nuevo usuario.
+- Si te registras y no pones foto, te pone una por defecto.
+- Se guarda la sesión mientras no cierres el navegador.
+- Salir de la aplicación.
+
+- ENTRAR COMO LECTOR:
+	-> Puedes usar: usuario: jesus, contraseña: jesus_123Ab
+	- Estos usuarios pueden entrar en la parte de productos.
+	- Seleccionar uno para verlo de forma ampliada, sus comentarios y añadir uno él.
+	- Una vez insertado el comentario, se recarga la página para que veas tu comentario puesto.
+
+- ENTRAR COMO ADMINISTRADOR
+	-> Puedes usar: usuario: andres, contraseña: andres_123Ab
+	- Estos usuarios pueden hacer lo mismo que LECTORES.
+	- En la página de productos le sale un enlace arriba a la derecha para Añadir un nuevo producto.
+	- Esto lo redirecciona a AdminApp donde puede introducir los datos de un nuevo producto.
+	- Si no pone imagen, por defecto de pone una.
+	- Una vez insertado, te redirecciona de nuevo a la página productos.
+
+
+IMPLEMENTACIÓN DE LA API
+- He usado una API para obtener el tiempo en la provincia de Jaén.
+- Al entrar en la página para introducir el usuario, te dice el tiempo que va a hacer hoy y mañana mediante un mensaje alert.

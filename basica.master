@@ -1,0 +1,77 @@
+﻿<%@ Master Language="VB" CodeFile="basica.master.vb" Inherits="_Basica" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" />
+    <link href="/css/3-blue.css" rel="stylesheet" type="text/css" />
+    <script src="../../script/js/jquery-1.8.2.js"></script>
+    <script src="../../script/js/jquery-ui.js"></script>
+    <title>Cervezas Artesanas</title>
+    
+</head>
+<body>
+    <form id="formBasica" runat="server" >
+     <asp:ScriptManager ID="sm" runat="server" />
+
+        <div class="outer">
+
+           <div id="page_nav">
+               <div style="display:inline;position:relative;width:100%;margin-top:15px;">
+                      <div class="circle" style="float:right;">
+                            <asp:Image ID="iNick" runat="server"  width="30px" />
+                      </div>
+                      <div style="float:right;margin-top:5px;margin-right:10px">
+                            <asp:Menu ID="menuNav" runat="server" IncludeStyleBlock="false"  >
+                                <Items>
+                                    <asp:MenuItem Text="Iniciar sesión" NavigateUrl="~/contenidos/anonimo/InicioSesion.aspx" />
+                                    <asp:MenuItem Text="Registrarse" NavigateUrl="~/contenidos/anonimo/RegistroUsuario.aspx" />
+                                </Items>
+                            </asp:Menu>
+                      </div>
+                 </div>
+            </div>
+
+       <div id="header" class="clearfix">
+                <div class="logo"> 
+                     <asp:ImageButton ID="logo" runat="server" ImageUrl="/imagenes/logos/logo.PNG" AlternateText="logo" width="246px"  PostBackUrl="~/contenidos/publico/Productos.aspx" />
+                 </div>      
+        </div> 
+  
+        <div id="main_nav"> 
+           <%-- Incluir API --%>
+            
+         </div>
+          
+          <div id="wrapper" class="clearfix">        	
+         
+                  
+		      <div id="sidebar">
+                    <asp:ContentPlaceHolder id="barra" runat="server">
+                    </asp:ContentPlaceHolder>
+             </div> <!-- sidebar right-->           
+          
+         </div> <!-- wrapper #end -->
+
+         <div id="bottom" class="clearfix">
+                   <asp:ContentPlaceHolder id="principal" runat="server">
+                   </asp:ContentPlaceHolder>
+         </div>  
+
+        <div id="footer" class="clearfix">
+            <p><b>
+                <asp:Label ID="lCopy1" runat="server" CssClass="copyleft" Text="&copy;" />
+                <asp:Label ID="lCopy2" runat="server" Text=" 2º DAW - 2022. No se reserva ningún derecho." />
+                <span class="fr">
+                    <asp:Label ID="lDiseno" runat="server" Text="Diseñado por "  />
+                    <asp:HyperLink ID="hlPie" runat="server" Text=" Inmaculada Talavera" NavigateUrl="#"  />
+                </span>
+            </b></p>	
+        </div> 
+    </div>
+</form>
+</body>
+</html>
